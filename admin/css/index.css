@@ -4,14 +4,16 @@ header {
     height: auto;
     margin: auto;
 }
-    ul { list-style: none; 
+    ul { 
+    list-style: none; 
     text-align: center;
 }
-    a { text-decoration: none; color: black;
+    a 
+    { 
+        text-decoration: none; color: black;
     }
-    body {
+* {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background: #F4D1AB;
     }
     #menu-wrapper {
     overflow: hidden;
@@ -65,3 +67,25 @@ header {
     height: 50px;
     padding: 10px;
 }
+
+.content{
+    margin: 10px 100px 10px 300px;
+    color:black;
+}
+.form-add-student
+{
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 5px;
+  border: 1px solid #f29393;
+  padding: 10px;
+}
+button {
+    background: #dbb68e;
+    padding: 10px;
+    border-radius: 10px;
+}
+

@@ -4,7 +4,7 @@
    </div>
    <ul class="menu-list accordion">
             <li id="nav1" class="toggle"> 
-               <a class="menu-link" href="#">STUDENT</a>
+               <a class="menu-link" href="./index.php?click=student&id=1">STUDENT</a>
             </li>
             <li id="nav1" class="toggle"> 
                <a class="menu-link" href="#">TEACHER</a>
@@ -30,10 +30,11 @@ $(function() {
           $("#menu-container .menu-list").animate({left: activeState ? "0%" : "-100%"}, 500);
          }
      $("#menu-wrapper").click(function(event) {
-    $("#hamburger-menu").toggleClass("open");
-    $("#menu-container .menu-list").toggleClass("active");
-    slideMenu();
+            $("#hamburger-menu").toggleClass("open");
+           $("#menu-container .menu-list").toggleClass("active");
+           slideMenu();
+      
   });
-
+  
 }); 
 </script>
