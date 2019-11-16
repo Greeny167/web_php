@@ -77,6 +77,12 @@ header {
   display: flex;
   flex-direction: column;
 }
+.form-edit-student
+{
+  display: flex;
+  flex-direction: column;
+}
+
 
 input {
   margin: 5px;
@@ -89,3 +95,8 @@ button {
     border-radius: 10px;
 }
 
+select {
+    margin: 5px;
+    border: 1px solid #f29393;
+    padding: 10px;
+}

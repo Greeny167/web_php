@@ -1,18 +1,52 @@
 
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-
-
-
-<form class="form-add-student" action='./modules/student/control.php' method='POST'>
+<style>
+    select {
+    margin: 5px;
+    border: 1px solid #f29393;
+    padding: 10px;
+}
+</style>
+<form class="form-add-student" action='./modules/student/control.php' method='POST'
+        enctype="multipart/form-data" >
     <table>
         <tr colspan=2> <strong>ADD NEW STUDENT</strong> </tr>
         <tr>
-            <td>ID</td>
-            <td><input type="text" name='txtUsername' placeholder='std_ngocmn' required></td>
+            <td>ACCOUNT</td>
+            <td><input type="text" name='txtAccount' placeholder='std_ngocmn' required></td>
         </tr>
-        
         <tr>
-            <td>NAME</td>
+            <td>PASSWORD</td>
+            <td><input type="password" name='txtPassword' placeholder='123456' required></td>
+        </tr>
+<?php
+    $sql = "SELECT `ROLE_ID` FROM `role`";
+    $result = $conn->query($sql);
+?>
+        <tr>
+            <td>ROLE</td>
+            <td><select name="role" id="role">
+                <option>---Choose role---</option>
+        <?php
+             while ($row = $result->fetch_assoc())
+             {
+                ?>
+                <option value='<?php echo $row['ROLE_ID'] ?>'><?php echo $row['ROLE_ID'] ?></option>
+         <?php
+             }
+         ?>
+            </select></td>
+        </tr>
+        <tr>
+            <td>CREATE DATE</td>
+            <td><input type="date" name='txtCreateDate'></td>
+        </tr>
+        <tr>
+            <td>PROFILE PICTURE</td>
+            <td><input type="file" name='fileAvt'></td>
+        </tr>
+        <tr>
+            <td>FULL NAME</td>
             <td><input type="text" name='txtFullname' placeholder='Nguyen Van A'></td>
         </tr>
         <tr>
@@ -22,8 +56,8 @@
         <tr>
             <td>Sex</td>
             <td>
-                <label for="female"><input type="radio" name='rbSex' id='female'>Female</label>
-                <label for="male"><input type="radio" name='rbSex' id='male'>Male</label>
+                <label for="female"><input type="radio" name='rbSex' id='female' value='female'>Female</label>
+                <label for="male"><input type="radio" name='rbSex' id='male' value='male'>Male</label>
             </td>
         </tr>
         <tr>

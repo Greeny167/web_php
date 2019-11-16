@@ -12,6 +12,7 @@
 </head>
 <body style='background: #F4D1AB;'>
     <?php
+        include('modules/connect.php');
         include('modules/header.php');
         include('modules/menu.php');
         include('modules/content.php');
