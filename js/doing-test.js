@@ -23,7 +23,7 @@ var data = [{
             },
             ];
 function Redirect() {
-              window.location="../index.php";
+              window.location="test/index.php";
            }
 $(function()
 {

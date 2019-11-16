@@ -4,6 +4,9 @@
    </div>
    <ul class="menu-list accordion">
             <li id="nav1" class="toggle"> 
+               <a class="menu-link" href="./index.php?click=account&id=1">ACCOUNT</a>
+            </li>
+            <li id="nav1" class="toggle"> 
                <a class="menu-link" href="./index.php?click=student&id=1">STUDENT</a>
             </li>
             <li id="nav1" class="toggle"> 
@@ -18,9 +21,7 @@
             <li id="nav1" class="toggle"> 
                <a class="menu-link" href="#">TEST</a>
             </li>
-            <li id="nav1" class="toggle"> 
-               <a class="menu-link" href="#">USER</a>
-            </li>
+           
    </ul>
 </div>
 <script>

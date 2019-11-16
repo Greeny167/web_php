@@ -6,6 +6,10 @@
     }
 </style>
 
+ <a href="./index.php?click=addStudent&id=1">
+      <button name='add-student-submit'>Add new Student</button>
+</a>
+<br><br>
     <table>
         <tr>
             <td>ID</td>
@@ -15,9 +19,7 @@
             <td>EMAIL</td>
             <td>ADDRESS</td>
             <td>PHONE</td>
-            <td>CONTROL
-                
-            </td>
+            <td>CONTROL </td>
         </tr>
 
         <tr>
@@ -29,12 +31,10 @@
             <td></td>
             <td></td>
             <td style='display: flex'>
-                <a href="./index.php?click=addStudent&id=1">
-                 <button name='add-student-submit'> Add</button>
-                 </a>
                 <button name='add-student-submit'>Edit</button>
                 <button name='add-student-submit'>Delete</button>
             </td>
-        </tr>
-        
+        </tr>      
     </table>
+
+   

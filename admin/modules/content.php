@@ -11,8 +11,14 @@
         if ($temp == 'student') {
             include ('./modules/student/listStudent.php');
         }
-        if ($temp == 'addStudent') {
+        else if ($temp == 'addStudent') {
             include ('./modules/student/addStudent.php');
+        }
+        else if ($temp == 'account') {
+            include ('./modules/account/listAccount.php');
+        }
+        else if ($temp == 'addAccount') {
+            include ('./modules/account/addAccount.php');
         }
         else {
            // include ('index.php');
