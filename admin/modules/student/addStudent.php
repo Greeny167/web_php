@@ -56,7 +56,7 @@
         <tr>
             <td>Sex</td>
             <td>
-                <label for="female"><input type="radio" name='rbSex' id='female' value='female'>Female</label>
+                <label for="female"><input type="radio" name='rbSex' id='female' value='female' checked>Female</label>
                 <label for="male"><input type="radio" name='rbSex' id='male' value='male'>Male</label>
             </td>
         </tr>

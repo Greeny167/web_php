@@ -17,7 +17,9 @@
         include('modules/menu.php');
         include('modules/content.php');
     ?>
-
+    <div class='content'>
+        
+    </div>
 </body>
 </html>
 

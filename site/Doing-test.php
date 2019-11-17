@@ -1,11 +1,10 @@
 
 	<link rel="stylesheet" type="text/css" href="./css/doing-test.css">
- 	 <link rel="stylesheet" type="text/css" href="./css/animate.css">
+ 	<link rel="stylesheet" type="text/css" href="./css/animate.css">
 	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
-	  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script type="text/javascript" src="./js/doing-test.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
-
+	<script type="text/javascript" src="./js/doing.js"></script>
 <div class='content'>
 <div class='container animated fadeInDown'>
 		<div class="row">

@@ -1,7 +1,8 @@
+<script>
 <?php
     include('../connect.php');
-    $id = $_GET['id'];
-    $acc_usename = $_POST['txtAccount'];
+      $id = $_GET['id'];
+      $acc_usename = $_POST['txtAccount'];
       $acc_pass = $_POST['txtPassword'];
       $acc_roleid = $_POST['role'];
       $acc_date = $_POST['txtCreateDate'];
@@ -26,45 +27,61 @@
             if (mysqli_query($conn, $sql2)) 
             {
               // echo "New record created successfully";
-               header('location:../../index.php?click=student&id=1');
+               header('location:../../index.php?click=student');
             } 
             else 
-               {
-               echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+               { 
+                  ?>
+                     alert('That username is taken. Try another!'); 
+                     window.location="../../index.php?click=student&id=1";
+                 <?php  
+             //  echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
                }
          } 
          else 
             {
-            echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+               ?>
+               alert ('That username is taken. Try another!');
+               window.location="../../index.php?click=student&id=1";
+               <?php 
+          //  echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
             }
     }
-    else if (isset($_POST['btnSubmitEdit'])){   
-      $sql1 = "UPDATE `account` SET `username` = '$acc_usename', `PASS` = '$acc_pass',
-                   `role_id`= '$acc_roleid', `AVATAR`= '$acc_avt'
-                   WHERE `username` = '$id'" ; 
-
-      $sql2 = "UPDATE `student` SET `USERNAME` ='$acc_usename', `FULLNAME` ='$sdt_fullname', 
+    else if (isset($_POST['btnSubmitEdit']))
+    {   
+      if ($acc_avt != '')
+        {
+            $sql1 = "UPDATE `account` SET `PASS` = '$acc_pass', 
+                    `role_id`= '$acc_roleid', `AVATAR`= '$acc_avt'
+                    WHERE `username` = '$id'"; 
+        }
+          else {
+            $sql1 = "UPDATE `account` SET `PASS` = '$acc_pass', 
+                    `role_id`= '$acc_roleid'
+                    WHERE `username` = '$id'" ; 
+           }
+       $sql2 = "UPDATE `student` SET `FULLNAME` ='$sdt_fullname', 
                `DOB` ='$sdt_dob', `SEX` = '$sdt_sex', `EMAIL`='$sdt_email',
                `ADDRESS`= '$sdt_addr', `PHONE`='$sdt_phone' 
                WHERE `username` = '$id'" ;
       if (mysqli_query($conn, $sql1)) 
-       {
-          if (mysqli_query($conn, $sql2)) 
-          {
-            // echo "New record created successfully";
-             header('location:../../index.php?click=student&id=1');
-          } 
-          else 
-             {
-             echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
-             }
-       } 
-       else 
-          {
-          echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
-          }
-
+      {
+         if (mysqli_query($conn, $sql2)) 
+         {
+            header('location:../../index.php?click=student&id=1');
+         } 
+         else 
+            {      
+            echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+            }
+      } 
+      else 
+         {
+         echo "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+         }
     }
+
+
     else
     {
       $sql1 = "DELETE FROM `student` WHERE USERNAME='$id'";
@@ -86,3 +103,4 @@
             }
     }
 ?>
+</script>

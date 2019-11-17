@@ -35,7 +35,7 @@
             <td style='display: flex;' height=74px> 
             <a href="./index.php?click=editAccount&ac=edit&id=<?php echo $row['username']?>">
                  <button  name='btnEditStudent'>Edit</button>
-                </a>          
+            </a>          
             </td>
         </tr> 
         <?php 

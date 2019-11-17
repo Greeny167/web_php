@@ -1,3 +1,4 @@
+<script>
 <?php
     include('../connect.php');
 
@@ -10,9 +11,18 @@
     
     if (isset($_POST['btnSubmitEdit'])) 
     { 
-        $sql = "UPDATE `account` SET `PASS` = '$acc_pass', 
-                `role_id`= '$acc_roleid', `AVATAR`= '$acc_avt'
-                WHERE `username` = '$id'" ; 
+
+        if ($acc_avt != '')
+        {
+            $sql = "UPDATE `account` SET `PASS` = '$acc_pass', 
+                    `role_id`= '$acc_roleid', `AVATAR`= '$acc_avt'
+                    WHERE `username` = '$id'" ; 
+        }
+        else {
+            $sql = "UPDATE `account` SET `PASS` = '$acc_pass', 
+                    `role_id`= '$acc_roleid'
+                    WHERE `username` = '$id'" ; 
+        }
       if (mysqli_query($conn, $sql)) 
             
              // echo "New record created successfully";
@@ -26,4 +36,6 @@
     else {
         
     }
+
 ?>
+</script>

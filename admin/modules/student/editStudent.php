@@ -24,7 +24,9 @@
     })
 </script>
 
-<form class="form-edit-student" action='./modules/student/control.php?id=<?php echo $row1['USERNAME'];?>' method='POST'>
+<form class="form-edit-student" action='./modules/student/control.php?id=<?php echo $row1['USERNAME'];?>' method='POST'
+enctype="multipart/form-data" >
+    <img src="modules/uploads/<?php echo $row2['AVATAR']?>" alt="avt" width=200px, height=200px>
     <table>
         <tr colspan=2> <strong>EDIT STUDENT</strong> </tr>
         <tr>
@@ -36,10 +38,21 @@
             <td><input type="text" name='txtPassword' value='<?php echo $row2['PASS']?>' required></td>
         </tr>
         <tr>
-            <td>ROLE</td>
-            <td><input type="text" name='txtRole' value='<?php echo $row2['role_id']?>' required></td>
+        <td>ROLE</td>
+        <td><select name="role" id="role">
+              <option value='<?php echo $row2['role_id']?>'><?php echo $row2['role_id']?></option>
+        <?php
+            $sql = "SELECT `ROLE_ID` FROM `role`";
+             $result = $conn->query($sql);
+             while ($row = $result->fetch_assoc())
+             {
+                ?>
+                <option value='<?php echo $row['ROLE_ID'] ?>'><?php echo $row['ROLE_ID'] ?></option>
+         <?php
+             }
+         ?>
+            </select></td>
         </tr>
-
         <tr>
             <td>PROFILE PICTURE</td>
             <td>

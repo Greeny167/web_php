@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +12,6 @@
     <div class='content'>
     <?php
       include('./site/content.php');
-
     ?>
     </div>
      <?php
