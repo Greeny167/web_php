@@ -1,30 +1,44 @@
 
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-
-
-
-<form class="form-add-user" action='./modules/account/control.php' method='POST'>
+<style>
+    select {
+    margin: 5px;
+    border: 1px solid #f29393;
+    padding: 10px;
+}
+</style>
+<?php
+     $sql = "SELECT * FROM `role`";
+     $result = $conn->query($sql);
+?>
+<form class="form-add-account" action='./modules/account/controlAcc.php' method='POST'
+        enctype="multipart/form-data" >
     <table>
-        <tr colspan=2> <strong>ADD NEW STUDENT</strong> </tr>
+        <tr colspan=2> <strong>ADD NEW ADMIN</strong> </tr>
         <tr>
-            <td>USERNAME</td> 
-            <td><input type="text" name='txtUsername' placeholder='std_ngocmn' required></td>
+            <td>ACCOUNT</td>
+            <td><input type="text" name='txtAccount' placeholder='admin_name' required></td>
         </tr>
         <tr>
             <td>PASSWORD</td>
-            <td><input type="text" name='txtPassword' placeholder='012345686'></td>
+            <td><input type="password" name='txtPassword' placeholder='123456' required></td>
         </tr>
-        <tr>
-            <td>ROLE</td>
-            <td><input type="text" name='txtRoleID' placeholder='role01'></td>
-        </tr>
+        
+<?php
+      //  while($row = $result->fetch_assoc())
+ //       {
+    ?>
+            <option value="<?php //echo $row['ROLE_ID'];?>"><?php //echo $row['ROLE_ID'];?></option>
+<?php
+      //  }
+    ?>
         <tr>
             <td>CREATE DATE</td>
-            <td><input type="date" name='txtCreateDate' ></td>
+            <td><input type="date" name='txtCreateDate'></td>
         </tr>
         <tr>
             <td>PROFILE PICTURE</td>
-            <td><input type="file" name='fileAvt' ></td>
+            <td><input type="file" name='fileAvt'></td>
         </tr>
         <tr>
             <td></td>

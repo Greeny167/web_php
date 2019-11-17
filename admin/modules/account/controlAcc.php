@@ -1,7 +1,5 @@
-<script>
 <?php
     include('../connect.php');
-
     $id = $_GET['id']; 
     $acc_pass = $_POST['txtPassword'];
     $acc_roleid = $_POST['role'];
@@ -11,7 +9,6 @@
     
     if (isset($_POST['btnSubmitEdit'])) 
     { 
-
         if ($acc_avt != '')
         {
             $sql = "UPDATE `account` SET `PASS` = '$acc_pass', 
@@ -23,19 +20,42 @@
                     `role_id`= '$acc_roleid'
                     WHERE `username` = '$id'" ; 
         }
-      if (mysqli_query($conn, $sql)) 
-            
+       if (mysqli_query($conn, $sql)) 
              // echo "New record created successfully";
                  header('location:../../index.php?click=account&id=1');
-            
         else 
          {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  ?>
+            <script>
+                 alert('That username is taken. Try another!'); 
+                 window.location="../../index.php?click=addAccount";
+            </script>          
+<?php
+           // echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             }
         }
-    else {
-        
-    }
+    else if  (isset($_POST['btnSubmitAdd']))  
+    {
+        $acc_usename = $_POST['txtAccount'];
+        $acc_date =  $_POST['txtCreateDate'];
+        $sql = "INSERT INTO `account`(`username`, `PASS`, `role_id`,`create_date`, `AVATAR`) 
+        VALUES ('$acc_usename','$acc_pass','admin', '$acc_date','$acc_avt')";
 
+         if (mysqli_query($conn, $sql)) 
+             // echo "New record created successfully";
+                 header('location:../../index.php?click=account&id=1');
+        else 
+         {
+    ?>
+            <script>
+                 alert('That username is taken. Try another!'); 
+                 window.location="../../index.php?click=addAccount";
+            </script>          
+<?php
+           // echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }      
+    }
+    else{
+
+    }
 ?>
-</script>

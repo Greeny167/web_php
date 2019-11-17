@@ -7,10 +7,13 @@
     }
 </style>
  
-<?php
+<?php 
     $sql = 'SELECT * FROM `account` WHERE 1';
     $result = $conn->query($sql);
 ?>
+<a href="./index.php?click=addAccount&ac=add">
+      <button name='btnAddAccount'>Add new Account</button>
+</a><br><br>
 <div class='account-info'></div>
     <table>
         <tr>

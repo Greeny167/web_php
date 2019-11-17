@@ -10,18 +10,17 @@
                <a class="menu-link" href="./index.php?click=student&id=1">STUDENT</a>
             </li>
             <li id="nav1" class="toggle"> 
-               <a class="menu-link" href="#">TEACHER</a>
+               <a class="menu-link" href="./index.php?click=teacher&id=3">TEACHER</a>
             </li>
             <li id="nav1" class="toggle"> 
-               <a class="menu-link" href="#">COURSE</a>
+               <a class="menu-link" href="./index.php?click=course&id=4">COURSE</a>
             </li>
             <li id="nav1" class="toggle"> 
                <a class="menu-link" href="#">CLASS</a>
             </li>
             <li id="nav1" class="toggle"> 
                <a class="menu-link" href="#">TEST</a>
-            </li>
-           
+            </li>    
    </ul>
 </div>
 <script>

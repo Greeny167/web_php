@@ -1,25 +1,17 @@
 
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-<style>
-    select {
-    margin: 5px;
-    border: 1px solid #f29393;
-    padding: 10px;
-}
-</style>
-<form class="form-add-student" action='./modules/student/control.php' method='POST'
-        enctype="multipart/form-data" >
+<form class="form-add-student" action='./modules/teacher/controlTeacher.php' method='POST'
+        enctype="multipart/form-data">
     <table>
-        <tr colspan=2> <strong>ADD NEW STUDENT</strong> </tr>
+        <tr colspan=2> <strong>ADD NEW TEACHER</strong> </tr>
         <tr>
             <td>ACCOUNT</td>
-            <td><input type="text" name='txtAccount' placeholder='std_ngocmn' required></td>
+            <td><input type="text" name='txtAccount' placeholder='teacher_ngocmn' required></td>
         </tr>
         <tr>
             <td>PASSWORD</td>
             <td><input type="password" name='txtPassword' placeholder='123456' required></td>
         </tr>
-
         <tr>
             <td>CREATE DATE</td>
             <td><input type="date" name='txtCreateDate'></td>
@@ -29,8 +21,8 @@
             <td><input type="file" name='fileAvt'></td>
         </tr>
         <tr>
-            <td>FULL NAME</td>
-            <td><input type="text" name='txtFullname' placeholder='Nguyen Van A'></td>
+            <td>FULLNAME</td>
+            <td><input type="text" name='txtFullname' placeholder='Mai Như Ngọc'></td>
         </tr>
         <tr>
             <td>Date of birth</td>
@@ -54,6 +46,10 @@
         <tr>
             <td>Phone</td>
             <td><input type="number" name='txtPhone' placeholder='012345686'></td>
+        </tr>
+        <tr>
+            <td>Certificate</td>
+            <td><input type="text" name='txtCerti' placeholder='IELTS, TOIEC,...'></td>
         </tr>
         <tr>
             <td></td>

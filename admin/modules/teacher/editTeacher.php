@@ -2,7 +2,7 @@
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 
 <?php
-     $sql1 = "SELECT * FROM `student` WHERE USERNAME ='$_GET[id]'";
+     $sql1 = "SELECT * FROM `teacher` WHERE USERNAME ='$_GET[id]'";
      $sql2 = "SELECT * FROM `account` WHERE username ='$_GET[id]'";
      $result1 = $conn->query($sql1);
      $result2 = $conn->query($sql2);
@@ -24,11 +24,11 @@
     })
 </script>
 
-<form class="form-edit-student" action='./modules/student/control.php?id=<?php echo $row1['USERNAME'];?>' method='POST'
+<form class="form-edit-student" action='./modules/teacher/controlTeacher.php?id=<?php echo $row1['USERNAME'];?>' method='POST'
 enctype="multipart/form-data" >
     <img src="modules/uploads/<?php echo $row2['AVATAR']?>" alt="avt" width=200px, height=200px>
     <table>
-        <tr colspan=2> <strong>EDIT STUDENT</strong> </tr>
+        <tr colspan=2> <strong>EDIT TEACHER</strong> </tr>
         <tr>
             <td>ACCOUNT</td>
             <td><input  disabled type="text" name='txtAccount' value='<?php echo $row1['USERNAME']?>' required></td>
@@ -37,7 +37,6 @@ enctype="multipart/form-data" >
             <td>PASSWORD</td>
             <td><input type="text" name='txtPassword' value='<?php echo $row2['PASS']?>' required></td>
         </tr>
-    
         <tr>
             <td>PROFILE PICTURE</td>
             <td>
@@ -46,7 +45,7 @@ enctype="multipart/form-data" >
         </tr>
         <tr>
             <td>FULLNAME</td>
-            <td><input type="text" name='txtFullname' placeholder='Nguyen Van A' value='<?php echo $row1['FULLNAME']?>' ></td>
+            <td><input type="text" name='txtFullname' value='<?php echo $row1['FULLNAME']?>' ></td>
         </tr>
         <tr>
             <td>Date of birth</td>
@@ -61,15 +60,19 @@ enctype="multipart/form-data" >
         </tr>
         <tr>
             <td>Email</td>
-            <td><input type="email" name='txtEmail' value='<?php echo $row1['EMAIL']?>'  placeholder='example@gmail.com'></td>
+            <td><input type="email" name='txtEmail' value='<?php echo $row1['EMAIL']?>'></td>
         </tr>
         <tr>
             <td>Address</td>
-            <td><input type="text" name='txtAddr' value='<?php echo $row1['ADDRESS']?>'  placeholder='HCM City'></td>
+            <td><input type="text" name='txtAddr' value='<?php echo $row1['ADDRESS']?>'></td>
         </tr>
         <tr>
             <td>Phone</td>
-            <td><input type="number" name='txtPhone' value='<?php echo $row1['PHONE']?>'  placeholder='012345686'></td>
+            <td><input type="number" name='txtPhone' value='<?php echo $row1['PHONE']?>'></td>
+        </tr>
+        <tr>
+            <td>Certificate</td>
+            <td><input type="text" name='txtCerti' value='<?php echo $row1['CERTIFICATE']?>'></td>
         </tr>
         <tr>
             <td></td>

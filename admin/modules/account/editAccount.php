@@ -9,7 +9,7 @@
      $row1 = $result1->fetch_assoc();
      $row2 = $result2->fetch_assoc();
 ?>
-<form class="form-edit-account" action='./modules/account/controlAcc.php?id=<?php echo $row1['USERNAME'];?>' 
+<form class="form-edit-account" action='./modules/account/controlAcc.php?id=<?php echo $row2['username'];?>' 
         enctype="multipart/form-data" method='POST'>
         <img src="modules/uploads/<?php echo $row2['AVATAR']?>" alt="avatar"
          width=250px, height=250px>
@@ -18,7 +18,7 @@
         <tr colspan=2> <strong>EDIT ACCOUNT</strong> </tr>
         <tr>
             <td>ACCOUNT</td>
-            <td><input  disabled type="text" name='txtUsername' value='<?php echo $row1['USERNAME']?>' required></td>
+            <td><input  disabled type="text" name='txtUsername' value='<?php echo $row2['username']?>' required></td>
         </tr>
         <tr>
             <td>PASSWORD</td>
