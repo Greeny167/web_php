@@ -21,7 +21,7 @@
     -moz-transform: rotate(-5deg) scale(1.0);
     -o-transform: rotate(-5deg) scale(0.9);
 }
-ul{
+.menu-1{
     display: flex;
     flex-direction: row;
 }

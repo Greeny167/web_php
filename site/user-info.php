@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Information</title>
-    <link rel="stylesheet" type="text/css" href="../css/user-info.css">
-    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-</head>
-<body style="background-size: auto 1800px">
-    <!--header && footer-->
-    <?php
-        include ('header.php');
-        include ('footer.php');
-    ?>
 
-    <div class='content'>
-    <div class="user_sidebar">
-			<div class="s_tittle"><img src="../img/avt.png" alt="avata" height="60px" width="60px"><i>username</i></div>
+    <link rel="stylesheet" type="text/css" href="css/info.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+ <?php
+	include('site/header.php');
+	include('site/menu.php');
+//	include('site/footer.php');
+ ?>
+ <body style="background-size: auto 1700px;">
+	 
+<div class='conntainer' >
+	<div class='row'>
+	<div class = 'col-md-1'></div>
+    <div class="col-md-3 user_sidebar">
+			<div class="s_tittle"><img src="img/avt.png" alt="avata" height="60px" width="60px"><i>username</i></div>
 			<br>
 			<ul class="menu_user">
 				<li class="info"><a href="./user-info.php"><b>Profile</b></a>
@@ -53,8 +49,9 @@
 				
 				<li class="logout"><a href="#"><b>Log Out</b></a></li>
 			</ul>
-		</div>
-		<div class="info_ ">
+	</div>
+	<div class = 'col-md-1'></div>
+		<div class=" col-md-6 info_">
 			<div class="s_tittle"><i>Profile</i></div>
 			<div class="ul_basic_info">
 				<div class="label_ul"><span class="label_list">Basic Infomation</span></div>
@@ -119,6 +116,8 @@
 			</div>
 			
 		</div>
-    </div>
+	<div class = 'col-md-1'></div>
+	</div>
+	</div>
+</div>
 </body>
-</html>

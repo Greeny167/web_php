@@ -24,6 +24,10 @@
         else if ($temp == 'test-choosen') {
             include ('site/test-detail.php');
         }
+        else if ($temp == 'info')
+        {
+            include ('site/user-info.php');
+        }
         else {
             include ('site/home.php');
         }

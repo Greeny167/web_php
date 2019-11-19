@@ -16,7 +16,7 @@
                <a class="menu-link" href="./index.php?click=course&id=4">COURSE</a>
             </li>
             <li id="nav1" class="toggle"> 
-               <a class="menu-link" href="#">CLASS</a>
+               <a class="menu-link" href="./index.php?click=class&id=5">CLASS</a>
             </li>
             <li id="nav1" class="toggle"> 
                <a class="menu-link" href="#">TEST</a>

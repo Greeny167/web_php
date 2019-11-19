@@ -1,55 +1,15 @@
 
-body{
-
-  display: grid;
-  grid-gap: 20px;
- grid-template-rows: 20% 80%;
-}
-
 .s_tittle {
- border-bottom: 2px solid #7eb9be;
- padding:0 20px;
+   border-bottom: 2px solid #7eb9be;
+   padding:0 20px;
 }
-
-header{
-  position: relative;
-  grid-row-start: 1;  
-  grid-row-end: 1;
- 
-}
-.content{
-  margin: 20px;
-  padding: 0 50px 20px;
-  position: relative;
-  z-index:1;
-  grid-row-start: 2;  
-  grid-row-end: 2;
-  mix-blend-mode: normal;
-  color: #544738;
-  mix-blend-mode: screen;
-  box-sizing: border-box;
-  display: grid;
-  grid-gap: 1px;
-  grid-template-columns: 350px 700px;
-
-}
-
-
 
 /************************************************/
 
 .info_ {
-  position: relative;
   background-color: #f4f1e5 ;
-  opacity: 0.7;
-  padding: 40px 10px;
-  border: 1px solid #cbddef;
   border-radius: 17px;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;  
-  grid-row-end: 1;
-  width: 600px;
+  width: 100px;
   z-index: 1;
 }
 
@@ -60,10 +20,6 @@ header{
     padding: 50px 0;
     border: 1px solid #cbddef;
     border-radius: 17px;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;  
-    grid-row-end: 1;
     width: 300px;
     z-index: 10;
 }
@@ -71,7 +27,6 @@ header{
 .menu_user {
   list-style: none;
   padding: 0 20px;
-  margin: 0;
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;

@@ -8,7 +8,6 @@
       include('./site/header.php');
       include('./site/menu.php');
     ?>
-    
     <div class='content'>
     <?php
       include('./site/content.php');

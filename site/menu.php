@@ -7,7 +7,7 @@
           <li class="col-md-4"><a href="./index.php?click=home&id=1">HOME</a></li>
           <li class="col-md-4" data-type="all"><a href="./index.php?click=test&id=2">TEST</a>
         </li>
-         <li class="col-md-4"><a href="#">COURSES</a></li>
+         <li class="col-md-4"><a href="./index.php?click=info&id=4">COURSES</a></li>
            <li class="col-md-4"><a href="./index.php?click=about&id=4">ABOUT</a></li>
     </ul>
 </div>
